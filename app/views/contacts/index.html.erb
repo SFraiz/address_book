@@ -1,0 +1,9 @@
+<h1>Contacts</h1>
+<ul>
+<% @contacts.each do |contact| %>
+	<li>
+		<%= 'Name: ' + contact.name %> - <%= 'Address: ' + contact.address %> - <%= 'Phone number: ' + contact.phone_number %> - <%= 'Email address: ' + contact.email_address %> - <%= link_to "view profile", "/profile", class: "profile" %>
+	</li>
+<% end %>
+</ul>
+<p><%= link_to "new contact", "/new", class: "sumbit-contact" %></p>
